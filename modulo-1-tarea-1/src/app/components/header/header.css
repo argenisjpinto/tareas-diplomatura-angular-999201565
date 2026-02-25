@@ -1,0 +1,29 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background-color: #1e1e2f;
+  color: white;
+}
+
+header img {
+  width: 60px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+header li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+header li:hover {
+  color: #dd0031; /* rojo Angular */
+}
