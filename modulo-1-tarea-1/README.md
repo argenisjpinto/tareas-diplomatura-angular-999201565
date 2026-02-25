@@ -30,51 +30,51 @@ El objetivo de la actividad fue:
 
 ## 🗂️ Estructura del proyecto
 
-modulo-1-tarea-1/
-│
-├── public/
-│ └── favicon.ico
-│
-├── src/
-│ ├── app/
-│ │ ├── components/
-│ │ │ ├── header/
-│ │ │ │  ├── header.css
-│ │ │ │  ├── header.html
-│ │ │ │  ├── header.spec.ts
-│ │ │ │  └── header.ts
-│ │ │ │
-│ │ │ └── footer/
-│ │ │    ├── footer.css
-│ │ │    ├── footer.html
-│ │ │    ├── footer.spec.ts
-│ │ │    └── footer.ts
-│ │ │
-│ │ ├── app.config.server.ts
-│ │ ├── app.config.ts
-│ │ ├── app.css
-│ │ ├── app.html
-│ │ ├── app.routes.server.ts
-│ │ ├── app.routes.ts
-│ │ ├── app.spec.ts
-│ │ └── app.ts
-│ │
-│ ├── assets/
-│ │ ├── angular-cool-logo.png
-│ │ ├── angular-icon.svg
-│ │ └── home.jpg
-│ │
-│ ├── enviroments/
-│ │
-│ ├── index.html
-│ ├── main.server.ts
-│ ├── main.ts
-│ ├── server.ts
-│ └── styles.css
-│
-├── angular.json
-├── package.json
-└── README.md
+    modulo-1-tarea-1/
+    │
+    ├── public/
+    │   └── favicon.ico
+    │
+    ├── src/
+    │   ├── app/
+    │   │   ├── components/
+    │   │   │   ├── header/
+    │   │   │   │   ├── header.css
+    │   │   │   │   ├── header.html
+    │   │   │   │   ├── header.spec.ts
+    │   │   │   │   └── header.ts
+    │   │   │   │
+    │   │   │   └── footer/
+    │   │   │       ├── footer.css
+    │   │   │       ├── footer.html
+    │   │   │       ├── footer.spec.ts
+    │   │   │       └── footer.ts
+    │   │   │
+    │   │   ├── app.config.server.ts
+    │   │   ├── app.config.ts
+    │   │   ├── app.css
+    │   │   ├── app.html
+    │   │   ├── app.routes.server.ts
+    │   │   ├── app.routes.ts
+    │   │   ├── app.spec.ts
+    │   │   └── app.ts
+    │   │
+    │   ├── assets/
+    │   │   ├── angular-cool-logo.png
+    │   │   ├── angular-icon.svg
+    │   │   └── home.jpg
+    │   │
+    │   ├── environments/
+    │   │
+    │   ├── index.html
+    │   ├── main.server.ts
+    │   ├── main.ts
+    │   ├── server.ts
+    │   └── styles.css
+    │
+    ├── angular.json
+    ├── package.json
+    └── README.md
 
 ------------------------------------------------------------------------
 
@@ -123,7 +123,7 @@ La captura muestra:
 
 ### 1️⃣ Clonar el repositorio
 
-git clone \[\] cd modulo-1-tarea-1
+git clone https://github.com/argenisjpinto/tareas-diplomatura-angular-999201565.git
 
 ### 2️⃣ Instalar dependencias
 
