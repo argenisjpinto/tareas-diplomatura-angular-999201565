@@ -1,0 +1,38 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <h2 [ngStyle]="{'color': form.valid ? 'green' : 'red'}">Formulario de Registro</h2>
+  <p class="description">
+    Completa los datos para registrarte correctamente.
+  </p>
+
+  <div [ngClass]="{'error': form.get('nombre')?.invalid && form.get('nombre')?.touched}">
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" formControlName="nombre" type="text" required>
+
+    @for (err of getErrors('nombre'); track $index) {
+      <p class="error-message">{{ err }}</p>
+    }
+  </div>
+  <div [ngClass]="{'error': form.get('email')?.invalid && form.get('email')?.touched}">
+    <label  for="email">Email:</label>
+    <input id="email" formControlName="email" type="email" required>
+
+    @for (err of getErrors('email'); track $index) {
+      <p class="error-message">{{ err }}</p>
+    }
+  </div>
+  <div [ngClass]="{'error': form.get('mensaje')?.invalid && form.get('mensaje')?.touched}">
+    <label  for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" formControlName="mensaje"></textarea>
+
+    @for (err of getErrors('mensaje'); track $index) {
+      <p class="error-message">{{ err }}</p>
+    }
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Enviar</button>
+
+  @if (submitted && !form.dirty && !form.touched) {
+    <p>Formulario enviado con éxito!</p>
+}
+</form>
