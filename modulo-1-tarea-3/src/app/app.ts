@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { Header } from './components/header/header';
 import { Footer } from './components/footer/footer';
-import { Registro } from './components/registro/registro';
+import { ListaProductos } from './components/lista-productos/lista-productos';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Footer, Registro],
+  standalone: true,
+  imports: [Header, Footer, ListaProductos],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

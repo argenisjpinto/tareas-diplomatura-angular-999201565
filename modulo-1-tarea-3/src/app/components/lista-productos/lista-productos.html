@@ -1,0 +1,105 @@
+<section class="productos-container">
+  <h2>Lista de productos</h2>
+  <p class="subtitulo">Gestión y visualización de datos con servicios y pipes.</p>
+
+  @if (mensajeError) {
+    <p class="mensaje-error">{{ mensajeError }}</p>
+  }
+
+  <form [formGroup]="form" (ngSubmit)="agregarProducto()" class="formulario">
+    <div class="campo">
+      <label for="title">Nombre del producto</label>
+      <input
+        id="title"
+        type="text"
+        formControlName="title"
+        placeholder="Ej: Auriculares Bluetooth"
+      />
+      @if (form.get('title')?.invalid && form.get('title')?.touched) {
+        <small class="error">El nombre es obligatorio.</small>
+      }
+    </div>
+
+    <div class="campo">
+      <label for="price">Precio</label>
+      <input
+        id="price"
+        type="number"
+        formControlName="price"
+        placeholder="Ej: 120"
+      />
+      @if (form.get('price')?.invalid && form.get('price')?.touched) {
+        <small class="error">Ingresá un precio válido.</small>
+      }
+    </div>
+
+    <div class="campo">
+      <label for="description">Descripción</label>
+      <textarea
+        id="description"
+        rows="3"
+        formControlName="description"
+        placeholder="Descripción del producto"
+      ></textarea>
+      @if (form.get('description')?.invalid && form.get('description')?.touched) {
+        <small class="error">La descripción es obligatoria.</small>
+      }
+    </div>
+
+    <div class="campo">
+      <label for="image">URL de la imagen</label>
+      <input
+        id="image"
+        type="text"
+        formControlName="image"
+        placeholder="https://ejemplo.com/imagen.jpg"
+      />
+      @if (form.get('image')?.invalid && form.get('image')?.touched) {
+        <small class="error">La imagen es obligatoria.</small>
+      }
+    </div>
+
+    <button type="submit" class="btn-agregar">Agregar producto</button>
+  </form>
+
+  @if (productos.length === 0) {
+    <p class="lista-vacia">No hay productos disponibles.</p>
+  }
+
+  @if (productos.length > 0) {
+    <div class="grid-productos">
+      <div *ngFor="let producto of productos">
+        <article class="card-producto">
+          <img
+            [src]="producto.image || 'https://via.placeholder.com/200'"
+            [alt]="producto.title"
+          />
+
+          <h3>{{ producto.title }}</h3>
+
+          <p class="descripcion">
+            {{ producto.description | slice:0:200 }}
+            @if (producto.description.length > 200) {
+              ...
+            }
+          </p>
+
+          <p><strong>Precio:</strong> {{ producto.price | currency:'USD' }}</p>
+          <p>
+            <strong>Precio con descuento:</strong>
+            {{ producto.price | descuento:10 | currency:'USD' }}
+          </p>
+          <p><strong>Fecha de alta:</strong> {{ producto.fechaAlta | date:'dd/MM/yyyy' }}</p>
+
+          <button
+            type="button"
+            class="btn-eliminar"
+            (click)="eliminarProducto(producto.id)"
+          >
+            Eliminar
+          </button>
+        </article>
+      </div>
+    </div>
+  }
+</section>

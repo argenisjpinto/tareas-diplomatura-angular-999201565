@@ -1,0 +1,10 @@
+footer {
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 48px;
+  background: linear-gradient(135deg, #75aa85, #181a28);
+  color: #f1f5f9;
+  border-bottom: 1px solid rgba(26, 56, 155, 0.06);
+  font-family: "Inter", system-ui, sans-serif;
+}
