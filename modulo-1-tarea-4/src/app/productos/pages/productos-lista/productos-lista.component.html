@@ -1,0 +1,9 @@
+<section>
+  <h2>Productos</h2>
+
+  <div class="card" *ngFor="let producto of productos">
+    <h3>{{ producto.nombre }}</h3>
+    <p>Precio: USD {{ producto.precio }}</p>
+    <a [routerLink]="['/productos', producto.id]">Ver detalle</a>
+  </div>
+</section>

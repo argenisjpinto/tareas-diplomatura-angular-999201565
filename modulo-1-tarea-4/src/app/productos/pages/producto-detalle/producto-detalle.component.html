@@ -1,0 +1,16 @@
+<section *ngIf="productoSeleccionado; else noEncontrado">
+  <h2>Detalle del producto</h2>
+  <p><strong>ID:</strong> {{ productoSeleccionado.id }}</p>
+  <p><strong>Nombre:</strong> {{ productoSeleccionado.nombre }}</p>
+  <p><strong>Precio:</strong> USD {{ productoSeleccionado.precio }}</p>
+  <p><strong>Descripción:</strong> {{ productoSeleccionado.descripcion }}</p>
+
+  <a routerLink="/productos">Volver a productos</a>
+</section>
+
+<ng-template #noEncontrado>
+  <div class="no-encontrado">
+    <p>Producto no encontrado.</p>
+    <a routerLink="/productos">Volver a productos</a>
+  </div>
+</ng-template>

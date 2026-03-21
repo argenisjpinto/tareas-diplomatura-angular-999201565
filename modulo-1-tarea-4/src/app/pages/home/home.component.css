@@ -1,0 +1,23 @@
+section {
+  background: linear-gradient(145deg, #ffffff 0%, #f9fafb 100%);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section h2 {
+  color: #667eea;
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+section p {
+  color: #4b5563;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
